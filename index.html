@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Pace Yourself</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=800 height=600 style="width: 800px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/last.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/last.data",
+        frameworkUrl: "Build/last.framework.js",
+        codeUrl: "Build/last.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "YoonJeongCho",
+        productName: "Pace Yourself",
+        productVersion: "1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
